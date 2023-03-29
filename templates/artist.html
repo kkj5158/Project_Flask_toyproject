@@ -27,6 +27,7 @@
 
 
 <body>
+	{% include "layout.html" %} {% block content %}
 	<div class="artist_box">
 		<div class="artist_info">
 			<div class="artist_img" style="background-image: url('{{artist_info['img_url']}}')" ></div>
@@ -103,6 +104,7 @@
 
 	</div>
 
+	{% endblock %}
 </body>
 
 </html>
