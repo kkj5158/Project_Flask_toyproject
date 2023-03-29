@@ -1,25 +1,30 @@
 body {
-	font-family: 'Lato', Arial, sans-serif;
-	color: #3b3b3b;
+  font-family: "Lato", Arial, sans-serif;
+  color: #3b3b3b;
 }
 
 .container > header {
-	margin: 0 auto;
-	padding: 1em;
-	text-align: center;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center;
 }
 
 .container > header h1 {
   font-weight: 600;
-	font-size: 3em;
-	margin: 0;
+  font-size: 3em;
+  margin: 0;
 }
 
 .wrapper {
-	line-height: 1.5em;
-	margin: 0 auto;
-	padding: 2em 0 3em;
-	width: 90%;
-	max-width: 2000px;
-	overflow: hidden;
+  line-height: 1.5em;
+  margin: 0 auto;
+  padding: 2em 0 3em;
+  width: 90%;
+  max-width: 2000px;
+  overflow: hidden;
+}
+
+/* 아티스트 이미지를 resize된게 아닌 원본을 가져왔기 때문에 css에서 resizing 필요 */
+img {
+  width: 130px;
 }

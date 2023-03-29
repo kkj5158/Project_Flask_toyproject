@@ -21,9 +21,10 @@
   .artist_info{
   }
 
+  /* 아티스트 이미지를 resize된게 아니라 원본을 가져옴 */
   .artist_img {
-    width: 208px;
-    height: 208px;
+    width: 225px;
+    height: 225px;
 
     background-image: linear-gradient(0deg,
         rgba(0, 0, 0, 0.5),
