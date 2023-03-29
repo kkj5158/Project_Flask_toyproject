@@ -21,29 +21,6 @@
 
     <title>아티스트 랭킹</title>
 
-    <script>
-      $(document).ready(function () {
-        fetch("/ranking")
-          .then((res) => res.json())
-          .then((data) => {
-            data.forEach((artist) => {
-              let name = artist["name"];
-              let rank = artist["rank"];
-              let fan = artist["fan"];
-              let image_url = artist["image_url"];
-              let average_point = artist["average_point"];
-
-              $("#artists-ranking").append(`<tr>
-                    <td><img src=${image_url}></td>
-                    <th scope="row">${rank}</th>
-                    <td class="namebox" >${name}</td>
-                    <td>${fan}</td>
-                    <td>${average_point}</td>
-                    </tr>`);
-            });
-          });
-      });
-    </script>
   </head>
   <body>
     <nav class="navbar navbar-light bg-light">
