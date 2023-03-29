@@ -27,8 +27,7 @@
 
     background-image: linear-gradient(0deg,
         rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)),
-      url("https://cdn.topstarnews.net/news/photo/201807/456143_108614_510.jpg");
+        rgba(0, 0, 0, 0.5));
       
     background-position: center 30%;
     background-size: contain;
