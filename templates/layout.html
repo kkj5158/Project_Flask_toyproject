@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          type="button"
+          class="btn btn-outline-dark"
+          onclick="location.href='/'"
+        >
+          Home
+        </button>
+        <form class="d-flex">
+          <button
+            type="button"
+            class="btn btn-outline-dark"
+            onclick="location.href='/login'"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    {% block content %} {% endblock %}
+  </body>
+</html>
