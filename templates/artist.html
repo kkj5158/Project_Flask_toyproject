@@ -29,33 +29,33 @@
 <body>
 	<div class="artist_box">
 		<div class="artist_info">
-			<div class="artist_img"></div>
+			<div class="artist_img" style="background-image: url('{{artist_info['img_url']}}')" ></div>
 
 			<div class="detail_info">
 				<div class="artist_name">{{artist_info['artist_name']}}</div>
-				<div class="member">안유진 (IVE) , 가을 (IVE) , 레이 (IVE) , 장원영 (IVE) , 리즈 (IVE) , 이서 (IVE)</div>
+				<div class="member">{{artist_info['artist_group_names']}}</div>
 				<div class="debut">
+					{% if artist_info['debut'] == 'none' %}
+
+					{% else %}
 					<div class="debut_box">
 						<div class="info_tb">데뷔</div>
-						<div class="debut_date">2021.12.01</div>
-						<div class="debut_song"><i class="fa-solid fa-music fa-beat-fade fa-xs"></i>ELEVEN</div>
+						<div class="debut_date">{{artist_info['debut']}}</div>
+						<div class="debut_song"><i class="fa-solid fa-music fa-beat-fade fa-xs"></i>{{artist_info['music']}}</div>
 					</div>
-				</div>
-				<div class="birthday_box">
-					<div class="info_tb">생일</div>
-					<div class="birthday_date">1997</div>
+					{% endif %}
 				</div>
 				<div class="activity_type_box">
 					<div class="info_tb">활동유형</div>
-					그룹
+					{{artist_info['a_type']}}
 				</div>
 				<div class="company_box">
 					<div class="info_tb">소속사</div>
-					스타쉽엔터인먼트
+					{{artist_info['company']}}
 				</div>
 				<div class="fan_num_box">
 					<div class="info_tb">팬 수</div>
-					68,330
+					{{artist_info['fan_num']}}
 				</div>
 			</div>
 		</div>

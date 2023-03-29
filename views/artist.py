@@ -70,6 +70,7 @@ def index():
 
     artist_group_names = artist_info.select("a.atistname > span")
 
+
     # print(artist_group_names[0])
     # print(artist_group_names[1])
     # print(artist_group_names[2])
@@ -92,23 +93,36 @@ def index():
 
     # print(artist_group_names)
 
-    debut = artist_info.select_one("span.gubun").text
+    if artist_info.select_one("span.gubun") is None:
+        debut = "none"
+    else:
+        debut = artist_info.select_one("span.gubun").text
 
 # print(debut)
 
-    music = artist_info.select_one(
-        "span.songname12"
-    ).text
+    if artist_info.select_one("span.songname12") is None:
+        music = ""
+    else:
+        music = artist_info.select_one("span.songname12").text
 
     # print(music)
 
-    info_list = artist_info.select("dd")
+    artist_detail_info = artist_info.select_one("dl.atist_info")
+
+    # print(artist_detail_info)
+
+    info_list = artist_detail_info.select("dd")
 
     # print("dd")
 
-    a_type = str(info_list[1])[4:-5]
-    
-    company = str(info_list[2])[4:-5]
+    if artist_info.select_one("span.gubun") is None:
+        a_type = str(info_list[0])[4:-5]
+        company = str(info_list[1])[4:-5]
+    else:
+        a_type = str(info_list[1])[4:-5]
+        company = str(info_list[2])[4:-5]
+
+
 
     # print(company)
      
@@ -125,8 +139,10 @@ def index():
     artists["company"] = company
     artists["img_url"] = img_url
     artists["fan_num"] = fan_num
+    artists["a_type"] = a_type
 
-    print(artists)
+
+
 
 
 
