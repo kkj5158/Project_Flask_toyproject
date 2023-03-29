@@ -16,18 +16,16 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../static/css/index.css" />
-    <script src="../static/js/index.js"> </script>
-
+    <script src="../static/js/index.js"></script>
 
     <title>아티스트 랭킹</title>
-
   </head>
   <body>
-    <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid d-flex justify-content-end">
-        <a class="navbar-brand" href="#">로그인/회원가입</a>
-      </div>
-    </nav>
+
+    {% include "layout.html" %}
+
+    {% block content %}
+
     <div class="container">
       <header>
         <h1>아티스트 랭킹 Top 50</h1>
@@ -49,5 +47,6 @@
         </table>
       </div>
     </div>
+    {% endblock %}
   </body>
 </html>
