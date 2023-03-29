@@ -9,5 +9,6 @@
     ],
     "liveSassCompile.settings.autoprefix": [
 
-    ]
+    ],
+    "python.formatting.provider": "black"
 }
