@@ -8,7 +8,7 @@ db = pymysql.connect(host='artist.cqjw1iajcspu.ap-northeast-2.rds.amazonaws.com'
                      db='artist',
                      charset='utf8')
 
-# cursor = db.cursor()
+cursor = db.cursor()
 
 # # 연결 테스트 
  

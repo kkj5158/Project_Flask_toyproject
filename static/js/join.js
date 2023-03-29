@@ -28,3 +28,37 @@ function passwordChecking() {
   }
 }
 password.onchange = passwordChecking;
+
+
+//join.py로 입력한 데이터 보내기
+
+function posting(){
+  alert('확인')
+
+  let id = $("#id").val()
+  let password = $('#password').val()
+  let email = $('#email').val()
+  let address = $('#address').val()
+  let phone = $('#phone').val()
+
+  let formData = new FormData();
+
+  formData.append("id_give", id);
+  formData.append("password_give", password);
+  formData.append("email_give", email);
+  formData.append("address_give", address);
+  formData.append("phone_give", phone);
+
+  alert("데이터전송1")
+
+  // localhost:5000/login/join
+  // ./->
+  
+  fetch('./join', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
+    alert(data['msg'])
+})
+
+  alert("데이터전송2")
+
+
+}

@@ -1,5 +1,10 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, jsonify, render_template, request
 import pymysql
+
+
+from pymongo import MongoClient
+client = MongoClient('mongodb+srv://sparta:test@cluster0.tt37u6v.mongodb.net/?retryWrites=true&w=majority')
+db = client.dbsparta
 
 
 # 루트
@@ -45,3 +50,21 @@ def index():
     }
 
     return render_template("artist.html", artist_info=artist)
+
+
+# localhost:5000/artist/gusetbook 
+
+@bp.route("/guestbook", methods=["POST"])
+def guestbook_post():
+    comment_receive = request.form['comment_give']
+    doc = {
+        'comment':comment_receive
+    }
+    db.fan.insert_one(doc)
+
+    return jsonify({'msg': '저장 완료'})
+
+@bp.route("/guestbook", methods=["GET"])
+def guestbook_get():
+    all_comments = list(db.fan.find({},{'_id':False}))
+    return jsonify({'result': all_comments})
