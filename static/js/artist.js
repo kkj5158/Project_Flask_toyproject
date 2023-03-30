@@ -2,10 +2,18 @@ $(document).ready(function () {
   show_comment();
 });
 function save_comment() {
+
+
   let comment = $("#comment").val();
+  let artist_id = $("#artist_id").text();
+
+  alert(artist_id)
 
   let formData = new FormData();
+
   formData.append("comment_give", comment);
+  formData.append("artist_id", artist_id);
+
 
   // localhost:5000/artist/gusetbook 
   
