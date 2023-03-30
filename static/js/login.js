@@ -25,7 +25,7 @@ function logout() {
 // 브라우저를 닫으면 자동 삭제되게 하거나, 일정 시간이 지나면 삭제되게 할 수 있습니다.
 function login() {
 
-  alert("로그인 시도")
+  // alert("로그인 시도")
 
   $.ajax({
     type: "POST",
@@ -33,7 +33,7 @@ function login() {
     data: { id_give: $('#userid').val(), pw_give: $('#userpw').val() },
     success: function (response) {
       if (response['result'] == 'success') {
-        alert("진입")
+        // alert("진입")
         // 로그인이 정상적으로 되면, 토큰을 받아옵니다.
         // 이 토큰을 mytoken이라는 키 값으로 쿠키에 저장합니다.
         $.cookie('mytoken', response['token']);

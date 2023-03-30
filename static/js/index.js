@@ -37,11 +37,11 @@ $(document).ready(function () {
 
     const ourl = new URL(url)
 
-    console.log(ourl.origin)
+    // console.log(ourl.origin)
 
     moveurl = ourl.origin + "/" + "artist?" + "artist_id_num=" + artist_id_num;
 
-    console.log(moveurl)
+    // console.log(moveurl)
 
     window.location.href = moveurl;
   });
