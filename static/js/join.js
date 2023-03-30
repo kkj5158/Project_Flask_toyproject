@@ -40,6 +40,7 @@ function posting(){
   let email = $('#email').val()
   let address = $('#address').val()
   let phone = $('#phone').val()
+  let name = $('#name').val()
 
   let formData = new FormData();
 
@@ -48,14 +49,19 @@ function posting(){
   formData.append("email_give", email);
   formData.append("address_give", address);
   formData.append("phone_give", phone);
+  formData.append("name", name);
+
 
   alert("데이터전송1")
 
   // localhost:5000/login/join
   // ./->
   
-  fetch('./join', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
+  fetch('./join/register', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
     alert(data['msg'])
+
+    window.location.href = '../'
+
 })
 
   alert("데이터전송2")
