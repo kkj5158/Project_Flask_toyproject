@@ -4,7 +4,7 @@ $(document).ready(function () {
   fetch("/ranking")
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       data.forEach((artist) => {
         let name = artist["name"];
         let rank = artist["ranking"];
@@ -35,12 +35,14 @@ $(document).ready(function () {
 
     var url = $(location).attr("href");
 
-    // console.log(url)
+    const ourl = new URL(url)
 
-    url = url + "artist?" + "artist_id_num=" + artist_id_num;
+    console.log(ourl.origin)
 
-    // console.log(url)
+    moveurl = ourl.origin + "/" + "artist?" + "artist_id_num=" + artist_id_num;
 
-    window.location.href = url;
+    console.log(moveurl)
+
+    window.location.href = moveurl;
   });
 });
