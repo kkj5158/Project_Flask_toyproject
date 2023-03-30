@@ -40,8 +40,9 @@ def index():
 
     artist = {
         "artist_name": row[1],
+        "artist_id" : row[5],
         "img_url": row[4],
-        "fan_num": row[5],
+        "fan_num": row[2],
         "members": row[6],
         "debut": row[7],
         "debut_song": row[8],
