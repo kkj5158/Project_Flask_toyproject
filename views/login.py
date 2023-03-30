@@ -67,10 +67,9 @@ def api_login():
     
     cursor.execute(sql,val)
     
-    result = cursor.fetchall()
+    result = cursor.fetchone()
 
     print(result)
-
 
 
 

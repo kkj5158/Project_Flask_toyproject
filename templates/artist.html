@@ -79,32 +79,16 @@
 
 	<div class="mycards" id="comment-list">
 
+		{% for x in comment%}
 		<div class="card">
 			<div class="card-body">
 				<blockquote class="blockquote mb-0">
-					<p>새로운 앨범 너무 멋져요!</p>
-					<footer class="blockquote-footer">호빵맨</footer>
+					<p>{{x[0]}}</p>
 				</blockquote>
 			</div>
 		</div>
+		{% endfor %}
 
-		<div class="card">
-			<div class="card-body">
-				<blockquote class="blockquote mb-0">
-					<p>새로운 앨범 너무 멋져요!</p>
-					<footer class="blockquote-footer">호빵맨</footer>
-				</blockquote>
-			</div>
-		</div>
-
-		<div class="card">
-			<div class="card-body">
-				<blockquote class="blockquote mb-0">
-					<p>새로운 앨범 너무 멋져요!</p>
-					<footer class="blockquote-footer">호빵맨</footer>
-				</blockquote>
-			</div>
-		</div>
 
 	</div>
 

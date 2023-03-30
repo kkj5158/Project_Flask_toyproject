@@ -33,7 +33,7 @@ password.onchange = passwordChecking;
 //join.py로 입력한 데이터 보내기
 
 function posting(){
-  alert('확인')
+  // alert('확인')
 
   let id = $("#id").val()
   let password = $('#password').val()
@@ -52,7 +52,7 @@ function posting(){
   formData.append("name", name);
 
 
-  alert("데이터전송1")
+  // alert("데이터전송1")
 
   // localhost:5000/login/join
   // ./->
@@ -64,7 +64,7 @@ function posting(){
 
 })
 
-  alert("데이터전송2")
+  // alert("데이터전송2")
 
 
 }
